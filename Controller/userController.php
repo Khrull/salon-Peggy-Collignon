@@ -13,6 +13,13 @@ class UserController
         require('view/frontend/connexionView.php');
     }
 
+    function formLoginAlert()
+    {
+        $session = new AlertManager();
+        $session->setflash('connectez-vous ou inscrivez-vous pour prendre rendez vous.','info');
+        require('view/frontend/connexionView.php');
+    }
+
     function formInscription()
     {
         $session = new AlertManager();
@@ -58,6 +65,11 @@ class UserController
                 
                 }
             }
+        }
+        elseif (empty($_POST['email']) || empty($_POST['password']))
+        {
+            $session->setflash('identifiant et/ou de passe manquants.','danger');
+            header('Location: index.php?action=btnSeConnecter');
         }    
     }
 

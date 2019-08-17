@@ -5,6 +5,7 @@ session_start();
 
 require('vendor/autoload.php');
 use Controller\PageController;
+use Controller\ClientController;
 use Controller\UserController;
 
 $action ="";
@@ -17,6 +18,10 @@ try {
 
                 case 'btnSeConnecter': $form = new UserController();
                 $form -> formLogin();
+                break;
+
+                case 'rdvLog': $form = new UserController();
+                $form -> formLoginAlert();
                 break;
 
                 case 'btnCreerCompte': $form = new UserController();
@@ -49,6 +54,30 @@ try {
 
                 case 'tarifsHomme': $form = new PageController();
                 $form -> tarifsHomme();
+                break;
+
+                case 'rendezVous': $form = new PageController();
+                $form -> rendezVous();
+                break;
+
+                case 'ficheClient': $form = new ClientController();
+                $form -> listAllClients();
+                break;
+                
+                case 'administration': $form = new PageController();
+                $form -> administration();
+                break;
+
+                case 'client': $client = new ClientController();
+                $client -> modificationclient();
+                break;
+
+                case 'modifier': $modifier = new ClientController();
+                $modifier -> modifier();
+                break;
+
+                case 'supprimer': $supprimer = new ClientController();
+                $supprimer -> suppression();
                 break;
 
                 default: $accueil = new PageController();

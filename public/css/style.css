@@ -6,7 +6,7 @@
 
 .bloc_page
 {
-    margin-top: 2.9%;
+     margin-top: 2.9%;
     text-align: center;
     border: 10px solid#353B41;
     background-color: rgb(255, 255, 255);
@@ -17,11 +17,20 @@
 {
     margin-bottom: 5%;  
 }
+
+.rdv
+{
+    margin-bottom: 5%;
+    height: 100%;  
+}
+
 .presentation
 {
     border: 5%;
     margin-bottom: 5%;
 }
+
+
 .footer h4, p
 {
     color: grey;

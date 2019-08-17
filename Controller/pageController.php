@@ -37,4 +37,18 @@ class PageController
         require('view/frontend/tarifhommeView.php');
     }
 
+    function rendezVous()
+    {
+        $session = new AlertManager();
+        require('view/frontend/rendezVousView.php');
+    }
+
+    function administration()
+    {
+        $session = new AlertManager();
+        require('view/backend/administrationView.php');
+    }
+
+    
+
 }

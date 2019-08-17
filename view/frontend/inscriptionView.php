@@ -10,10 +10,10 @@
 </div>
 <!-- Formulaire d'inscription-->
 <div class="container">
-	<div class="row">
+	<div class="d-flex justify-content-center">
 			
 				<form action="index.php?action=inscription&amp;identification=inscription" method="post" class="col-md-6" id="inscription">
-					<div class="shadow-lg form-group">
+					<div class="shadow-lg form-group ">
 						<input type="text" placeholder="Nom" id="nom" name="nom" class="form-control" required/>
 					</div>
 					<div class="shadow-lg form-group">

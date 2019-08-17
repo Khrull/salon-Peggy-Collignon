@@ -28,10 +28,12 @@
                                 <?php if(isset($_SESSION['utilisateur']))
                                 { ?>
                                 <a class="nav-item nav-link" href="index.php?action=deconnexion">Se déconnecter</a></li>
+                                <a class="nav-item nav-link" href="index.php?action=rendezVous">Rendez-vous</a></li>
                                 <?php }
                                 else {?>
                                 <a class="nav-item nav-link" href="index.php?action=btnSeConnecter">Se connecter</a></li>
                                 <a class="nav-item nav-link" href="index.php?action=btnCreerCompte">Créer un compte</a></li>
+                                <a class="nav-item nav-link" href="index.php?action=rdvLog">Rendez-vous</a></li>
                                 <?php }?>
                                 <a class="nav-item nav-link" href="index.php?action=femme">La femme</a></li>
                                 <a class="nav-item nav-link" href="index.php?action=homme">L'homme</a></li>
@@ -39,10 +41,14 @@
                                 {
                                     if($_SESSION['grpUtilisateur']==1)
                                         {?>
-                                            <a class="nav-item nav-link" href="index.php?action=ficheclient">Fichier client</a></li>
-                                            <a class="nav-item nav-link" href="index.php?action=rdv">Rendez-vous</a></li>
-                                                                            
+                                            <a class="nav-item nav-link" href="index.php?action=ficheClient">Fichier client</a></li>
+                                            <a class="nav-item nav-link" href="index.php?action=administration">Administration</a></li>
+                                                                                                                        
                                         <?php }
+                                    elseif($_SESSION['grpUtilisateur']==2)
+                                    {?>
+                                        <a class="nav-item nav-link" href="index.php?action=ficheClient">Fichier client</a></li>
+                                    <?php }    
                                 }?>
                             </div>
                         </div>               
