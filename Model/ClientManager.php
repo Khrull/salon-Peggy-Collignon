@@ -35,11 +35,11 @@ class ClientManager extends Manager
     }
 
     //modifie une fiche client
-        public function modifierFiche($clientId, $clientMail, $clientPhone, $clientAdresse, $clientBirth, $clientFiche)
+        public function modifierFiche($clientId, $clientPhone, $clientAdresse, $clientFiche)
         {
             $db = $this->dbConnect();
-            $modClient = $db->prepare('UPDATE users SET mail = ?, phone = ?, adresse = ?, birth = ?, fiche = ? WHERE id = ?');
-            $modifClient = $modClient->execute(array($clientMail, $clientPhone, $clientAdresse, $clientBirth, $clientFiche, $clientId));
+            $modClient = $db->prepare('UPDATE users SET phone = ?, adresse = ?, fiche = ? WHERE id = ?');
+            $modifClient = $modClient->execute(array($clientPhone, $clientAdresse, $clientFiche, $clientId));
         return $modifClient;
         }
 }

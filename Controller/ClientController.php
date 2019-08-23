@@ -35,7 +35,7 @@ class ClientController
         if (isset($_GET['id']))
         {
             $modFiche = new ClientManager();
-            $modifFiche = $modFiche->modifierFiche($_GET['id'], $_POST['mail'], $_POST['phone'], $_POST['adresse'], $_POST['birth'], $_POST['fiche']);
+            $modifFiche = $modFiche->modifierFiche($_GET['id'], $_POST['phone'], $_POST['adresse'], $_POST['fiche']);
         }
         else
         {

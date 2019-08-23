@@ -21,7 +21,7 @@ class UserManager extends Manager
     {
         $hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
         $db = $this->dbConnect();
-        $newUser = $db->prepare('INSERT INTO users (mail, nom, prenom, phone, adresse, birth, pass, date_inscription, fiche, id_groupe) VALUES(?,?,?,?,?,?,?, NOW(), "nouveau client", 3)');
+        $newUser = $db->prepare('INSERT INTO users (mail, nom, prenom, phone, adresse, birth, pass, fiche, id_groupe) VALUES(?,?,?,?,?,?,?, "nouveau client", 3)');
         $user = $newUser->execute(array($_POST['email'], $_POST['nom'], $_POST['prenom'], $_POST['phone'], $_POST['adresse'], $_POST['birth'], $hash));
         return $user;
         	

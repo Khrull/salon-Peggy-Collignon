@@ -11,6 +11,8 @@
     <div class="row">
         <div class="col-xl-12">
             <h1 class="display-3"><?= htmlspecialchars($client['nom'])?>  <?= htmlspecialchars($client['prenom']) ?></h1>
+            <p class="h4">né(e) le : <?= htmlspecialchars($client['birth'])?></p>
+            <p class="h4">Adresse mail : <?= htmlspecialchars($client['mail'])?></p>
         </div>    
     </div>
 </div> 
@@ -19,28 +21,19 @@
     <div class="row">
         <div class="col-xl-12">
             <form  method="post">
-                <div>
-                    <label for="titre">Adresse Mail</label><br />
-                    <input class="form-control" type="text" id="Mail" name="Mail" value="<?= $client['mail'] ?>"/>
-                </div>
 
                 <div>
-                    <label for="titre">Téléphone</label><br />
+                    <label for="phone">Téléphone</label><br />
                     <input class="form-control" type="text" id="phone" name="phone" value="<?= $client['phone'] ?>"/>
                 </div>
 
                 <div>
-                    <label for="titre">Adresse</label><br />
+                    <label for="adresse">Adresse</label><br />
                     <input class="form-control" type="text" id="adresse" name="adresse" value="<?= $client['adresse'] ?>"/>
                 </div>
 
                 <div>
-                    <label for="titre">Date de naissance</label><br />
-                    <input class="form-control" type="text" id="birth" name="birth" value="<?= $client['birth'] ?>"/>
-                </div>
-
-                <div>
-                    <label for="chapter">Fiche Client</label><br />
+                    <label for="fiche">Fiche Client</label><br />
                     <textarea class="form-control" rows = "40" id="fiche" name="fiche"><?= nl2br($client['fiche']) ?></textarea>
                 </div>
                 <div>
