@@ -16,16 +16,16 @@ if (isset($_GET['action'])) {
 try {
         switch ($action) {
 
-                case 'btnSeConnecter': $form = new UserController();
-                $form -> formLogin();
+                case 'btnSeConnecter': $btnconnexion = new UserController();
+                $btnconnexion -> formLogin();
                 break;
 
-                case 'rdvLog': $form = new UserController();
-                $form -> formLoginAlert();
+                case 'rdvLog': $rdvlog = new UserController();
+                $rdvlog -> formLoginAlert();
                 break;
 
-                case 'btnCreerCompte': $form = new UserController();
-                $form -> formInscription();
+                case 'btnCreerCompte': $newcompt = new UserController();
+                $newcompt -> formInscription();
                 break;
 
                 case 'connexion': $connexion = new UserController();
@@ -40,32 +40,32 @@ try {
                 $inscription -> addNewUser();
                 break;
 
-                case 'femme': $form = new PageController();
-                $form -> pageFemme();
+                case 'femme': $femme = new PageController();
+                $femme -> pageFemme();
                 break;
 
-                case 'homme': $form = new PageController();
-                $form -> pageHomme();
+                case 'homme': $homme = new PageController();
+                $homme -> pageHomme();
                 break;
 
-                case 'tarifsFemme': $form = new PageController();
-                $form -> tarifsFemme();
+                case 'tarifsFemme': $tariffemme = new PageController();
+                $tariffemme -> tarifsFemme();
                 break;
 
-                case 'tarifsHomme': $form = new PageController();
-                $form -> tarifsHomme();
+                case 'tarifsHomme': $tarifhomme = new PageController();
+                $tarifhomme -> tarifsHomme();
                 break;
 
-                case 'rendezVous': $form = new PageController();
-                $form -> rendezVous();
+                case 'rendezVous': $rdv = new PageController();
+                $rdv -> rendezVous();
                 break;
 
-                case 'ficheClient': $form = new ClientController();
-                $form -> listAllClients();
+                case 'ficheClient': $fiche = new ClientController();
+                $fiche -> listAllClients();
                 break;
                 
-                case 'administration': $form = new PageController();
-                $form -> administration();
+                case 'administration': $admin = new PageController();
+                $admin -> administration();
                 break;
 
                 case 'client': $client = new ClientController();
