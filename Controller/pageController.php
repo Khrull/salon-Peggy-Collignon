@@ -28,13 +28,13 @@ class PageController
     function tarifsFemme()
     {
         $session = new AlertManager();
-        require('view/frontend/tariffemmeView.php');
+        require('view/frontend/tarifFemmeView.php');
     }
 
     function tarifsHomme()
     {
         $session = new AlertManager();
-        require('view/frontend/tarifhommeView.php');
+        require('view/frontend/tarifHommeView.php');
     }
 
     function rendezVous()

@@ -1,39 +1,58 @@
 <?php $title = 'Peggy COLLIGNON coiffeur coloriste barbier'; ?>
 <?php ob_start(); ?>
 <div class="container-fluid">
-    <div class="row">
+    <div class="row textpres">
 
-        <?php $session->flash();?>
+        <?php $session->flash(); ?>
         <div class="col-xl-12 logo">
             <img src="public/images/logo_peggy_collignon.jpg" class="img-fluid" alt="Responsive image logo salon Peggy COLLIGNON">
-        </div>            
-    
+        </div>
+
         <div class="container-fluid presentation">
             <div class="row">
-                <div class="col align-self-start">
-                    <img class="shadow-lg" src="public/images/cotefemme2.jpg"  alt="coté femmes">
+                <div class="col align-self-start reveal-1">
+                    <img class="img-fluid" src="public/images/logofemme.jpg" alt="logofemme">
+                </div>    
+                <div class="col align-self-center reveal-2">
+                    <strong>Peggy, Sabine, Maguy</strong> et <strong>Cyndie</strong> vous accueillent pour toutes vos envies en matière de coupes, coiffures, colorations et soins pour cheveux. Notre savoir-faire et notre expérience nous permettent de vous assurer des coiffures de haute qualité, avec des produits de la gamme <strong>Biosthétique</strong> soigneusement choisis pour redonner à vos cheveux tout leur éclat et leur vitalité.
+Nous vous assurons également des conseils avisés pour le choix de la coupe, la coiffure ou la coloration idéale. 
                 </div>
-                <div class="col align-self-center">
-                    Peggy Sabine Maggie et Cyndie vous accueillent pour toutes vos envies en matière de coupes, coiffures, colorations et soins du cheveu. Le salon Peggy COLLIGNON saura aussi, messieurs, prendre soin de vos barbes et moustaches.
+                <div class="col align-self-end reveal-1">
+                    <img class="img-fluid" src="public/images/barbier.jpg" alt="logobarbier">
                 </div>
-                <div class="col align-self-end">
-                    <img class="shadow-lg" src="public/images/bac.jpg"  alt="les bacs">
-                </div>
+            </div>    
+            <div class="col align-self-center reveal-1 presfemme">
+                <img class="img-fluid shadow-lg" src="public/images/cotéFemme.jpg" alt="salon peggy collignon">
+            </div>
+            <div class="col align-self-center reveal-2">
+                Le salon <strong>Peggy COLLIGNON</strong> saura aussi, messieurs, prendre soin de vos barbes et moustaches. Vous découvrirez le savoir-faire de nos coiffeurs-barbiers et tous nos produits disponibles sur place pour le plus grand bonheur de vos poils. Coupe de cheveux, taille de barbe, rasage à l’ancienne, soins au poil. Offrez-vous un moment de détente et de convivialité en passant entre les mains expertes de nos coiffeuses-barbières et profitez du moment pour découvrir notre univers
+            </div>
+            <div class="col align-self-center reveal-1 presbarbier">
+                <img class="img-fluid shadow-lg" src="public/images/coinBarbier.jpg" alt="salon peggy collignon">
             </div>
         </div>
 
     </div>
-    <div class="container">     
-        <h4>Le salon:</h4>
-        <p>Adresse : 26 Rue nationale, 57420 Verny<br/>
-        Téléphone : 03 87 52 78 22</p>
-
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10469.057792507621!2d6.204083908984376!3d49.00555370848626!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeb45ff15523efd09!2sPeggy+Collignon+Coiffeur+Coloriste+Barbier!5e0!3m2!1sfr!2sfr!4v1561447902204!5m2!1sfr!2sfr" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-        <table class="table table-striped table-dark">
+    <div class="container-fluid localisation">
+        <div class="row">
+            <div class="col align-self-start reveal-1">
+                <h4>Le salon:</h4>
+                <p>Adresse : 26 Rue nationale, 57420 Verny<br />
+                    Téléphone : 03 87 52 78 22</p>
+            </div>
+            <div class="col align-self-center reveal-2">
+                <img class="img-fluid logo" src="public/images/logo.jpg" alt="logo pc">
+            </div>
+            <div class="col align-self-end reveal-1">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10469.057792507621!2d6.204083908984376!3d49.00555370848626!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeb45ff15523efd09!2sPeggy+Collignon+Coiffeur+Coloriste+Barbier!5e0!3m2!1sfr!2sfr!4v1561447902204!5m2!1sfr!2sfr" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="horaire">
+        <table class="table table-striped table-dark reveal-1">
             <thead>
                 <tr>
-                    <th scope="col"></th>                
+                    <th scope="col"></th>
                     <th scope="col">Ouverture</th>
                     <th scope="col">Fermeture</th>
                 </tr>
@@ -51,8 +70,8 @@
                 </tr>
                 <tr>
                     <th scope="row">Mercredi</th>
-                        <td>8:30</td>
-                        <td>12:00</td>
+                    <td>8:30</td>
+                    <td>12:00</td>
                 </tr>
                 <tr>
                     <th scope="row">Jeudi</th>
@@ -70,8 +89,8 @@
                     <td>16:30</td>
                 </tr>
             </tbody>
-        </table>                    
-    </div> 
-<?php $content = ob_get_clean(); ?>
+        </table>
+    </div>
+    <?php $content = ob_get_clean(); ?>
 
-<?php require('template.php'); ?>
+    <?php require('template.php'); ?>

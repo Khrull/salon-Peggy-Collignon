@@ -6,11 +6,9 @@
 
 .bloc_page
 {
-     margin-top: 2.9%;
+    margin-top: 2.9%;
     text-align: center;
     border: 10px solid#353B41;
-    background-color: rgb(255, 255, 255);
-    
 }
 
 .logo
@@ -23,6 +21,7 @@
     margin-bottom: 5%;
     height: 100%;  
 }
+
 
 .presentation
 {
@@ -59,6 +58,41 @@ input[type=submit]
     border-radius: 5px;
     border-color: grey;
     cursor: pointer;
+}
+
+.presfemme
+{
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.presbarbier
+{
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.localisation
+{
+    margin-bottom: 5%;
+}
+
+[class*="reveal-"] 
+{
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.reveal-visible 
+{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s cubic-bezier(.5, 0, 0, 1);
+}
+
+.reveal-2
+{
+    transition-delay: .1s;
 }
 
 @media (max-width: 1400px)
