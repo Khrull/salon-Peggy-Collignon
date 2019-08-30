@@ -3,6 +3,7 @@ namespace Controller;
 
 // Chargement des classes
 use Model\AlertManager;
+use Model\MailManager;
 
 
 class PageController
@@ -43,10 +44,28 @@ class PageController
         require('view/frontend/rendezVousView.php');
     }
 
-    function administration()
+    function agenda()
     {
         $session = new AlertManager();
-        require('view/backend/administrationView.php');
+        require('view/backend/agenda.php');
+    }
+    function formContact()
+    {
+        $session = new AlertManager();
+        require('view/frontend/formContactView.php');
+    }
+
+    function envoieMessage()
+    {
+       
+        if (isset($_POST['message']))
+        {
+            $sendMessage = new MailManager();
+            $envoie = $sendMessage->mailMe();
+        }
+        $session = new AlertManager();
+        $session->setflash('votre message a bien été envoyé','success');
+        header('location: index.php?action=accueil');
     }
 
     

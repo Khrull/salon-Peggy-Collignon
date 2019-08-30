@@ -64,8 +64,16 @@ try {
                 $fiche -> listAllClients();
                 break;
                 
-                case 'administration': $admin = new PageController();
-                $admin -> administration();
+                case 'agenda': $agenda = new PageController();
+                $agenda -> agenda();
+                break;
+                
+                case 'meContacter' : $contacter = new PageController();
+                $contacter -> formContact();
+                break;
+
+                case 'envoyerMessage' : $envoyerMessage = new PageController();
+                $envoyerMessage -> envoieMessage();
                 break;
 
                 case 'client': $client = new ClientController();

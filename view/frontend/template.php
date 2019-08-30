@@ -42,8 +42,7 @@
                                     if($_SESSION['grpUtilisateur']==1)
                                         {?>
                                             <a class="nav-item nav-link" href="index.php?action=ficheClient">Fichier client</a></li>
-                                            <a class="nav-item nav-link" href="index.php?action=administration">Administration</a></li>
-                                                                                                                        
+                                            <a class="nav-item nav-link" href="index.php?action=agenda">Agenda</a></li>
                                         <?php }
                                     elseif($_SESSION['grpUtilisateur']==2)
                                     {?>
@@ -63,26 +62,21 @@
             
         <footer class="footer">
             <div class="container-dark bg-dark">
-                <div class="row align-items-center" id="foot">
-                        <div class="text-center col-lg-4">
-                            <img src="public/images/la-biosthetique-logo.jpg" class="rounded" alt="la-biosthetique-logo">
-                        </div>
-
-                        <div class="text-center col-lg-4">
-                            
-                        </div>
-                        
-                        <div class="text-center col-lg-4">
+                <div class="row" id="foot">
+                    <div class="col align-self-start">
+                        <img src="public/images/la-biosthetique-logo.jpg" class="rounded" alt="la-biosthetique-logo">
+                    </div>
+                    <div class="col align-self-center logobio">
                         <?php
                         if(isset($_SESSION['utilisateur']))
                         {?>
                             <a href="index.php?action=meContacter" class="text-uppercase"><button class="btn btn-default">Me contacter</button></a>
                         <?php
-                        }?>    
-                            <div id="socialNetworks">
-                                <a href="https://www.facebook.com/pg/coiffeurpeggycollignon/posts/"><i class="fab fa-facebook-square fa-3x"></i></a>
-                            </div>
-                        </div>
+                        }?>
+                    </div>        
+                    <div class="col align-self-end" id="socialNetworks">
+                        <a href="https://www.facebook.com/pg/coiffeurpeggycollignon/posts/"><i class="fab fa-facebook-square fa-3x"></i></a>
+                    </div>
                 </div>
             </div>
         </footer>

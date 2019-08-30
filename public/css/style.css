@@ -95,6 +95,14 @@ input[type=submit]
     transition-delay: .1s;
 }
 
+.logobio
+{
+    margin-left: 10%;
+}
+
+
+
+
 @media (max-width: 1400px)
 {
     .bloc_page
@@ -132,4 +140,6 @@ input[type=submit]
         margin-block-start: 15%;
         margin-right: 0%;
     }
+
+
 }
