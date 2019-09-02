@@ -9,17 +9,17 @@
         </div>
 
         <div class="container-fluid presentation">
-            <div class="col align-self-center reveal-2">
+            <div class="col align-self-center reveal-1">
                 <strong>Peggy, Sabine, Maguy</strong> et <strong>Cyndie</strong> vous accueillent pour toutes vos envies en matière de coupes, coiffures, colorations et soins pour cheveux. Notre savoir-faire et notre expérience nous permettent de vous assurer des coiffures de haute qualité, avec des produits de la gamme <strong>Biosthétique</strong> soigneusement choisis pour redonner à vos cheveux tout leur éclat et leur vitalité.
 Nous vous assurons également des conseils avisés pour le choix de la coupe, la coiffure ou la coloration idéale. 
             </div>
-            <div class="col align-self-center reveal-1 presfemme">
+            <div class="col align-self-center reveal-2 presfemme">
                 <img class="img-fluid shadow-lg" src="public/images/cotéFemme.jpg" alt="salon peggy collignon">
             </div>
-            <div class="col align-self-center reveal-2">
+            <div class="col align-self-center reveal-1">
                 Le salon <strong>Peggy COLLIGNON</strong> saura aussi, messieurs, prendre soin de vos barbes et moustaches. Vous découvrirez le savoir-faire de nos coiffeurs-barbiers et tous nos produits disponibles sur place pour le plus grand bonheur de vos poils. Coupe de cheveux, taille de barbe, rasage à l’ancienne, soins au poil. Offrez-vous un moment de détente et de convivialité en passant entre les mains expertes de nos coiffeuses-barbières et profitez du moment pour découvrir notre univers
             </div>
-            <div class="col align-self-center reveal-1 presbarbier">
+            <div class="col align-self-center reveal-2 presbarbier">
                 <img class="img-fluid shadow-lg" src="public/images/coinBarbier.jpg" alt="salon peggy collignon">
             </div>
         </div>

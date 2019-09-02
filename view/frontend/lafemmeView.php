@@ -5,9 +5,12 @@
         <div class="col-xl-12 logo">
             <img src="public/images/coupefemme.jpg" class="img-fluid" alt="Responsive image coupe femme">
         </div> 
-        <a href="index.php?action=tarifsFemme">Les tarifs</a>
+        <div class="col align-self-center reveal-1">
+                Avoir de beaux cheveux est à la fois notre plus grand luxe et notre instrument de séduction le plus simple. Le symbole vivant de notre bonne santé, notre bien-être et notre style. Mais les cheveux sont aussi très fragiles et notre style de vie moderne conjugué à des facteurs environnementaux néfastes peut ternir leur beauté. Le salon <strong>Peggy Collignon</strong> adapte chaque produits à votre type de cheveux et cuir chevelu. 
+        </div>
+        
     </div>
-</div>    
+   
 
 <?php $content = ob_get_clean(); ?>
 

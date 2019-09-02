@@ -26,7 +26,7 @@
 			</div>
 		</form>
 	</div>
-</div>
+
    
 
 <?php $content = ob_get_clean(); ?>

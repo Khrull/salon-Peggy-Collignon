@@ -4,7 +4,7 @@
     <div class="row">
     <img src="public/images/TarifFemmes.jpg" class="img-fluid col align-self-center" alt="tarifs femme">
     </div>
-</div>    
+    
 
 <?php $content = ob_get_clean(); ?>
 

@@ -11,11 +11,11 @@
             </div>
         
             <div col align-self-center>
-            <a href="index.php?action=tarifsHomme">Les tarifs</a>
+            
             </div>
         </div>    
     </div>
-</div>    
+   
 
 <?php $content = ob_get_clean(); ?>
 

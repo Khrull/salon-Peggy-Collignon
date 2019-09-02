@@ -22,28 +22,17 @@
     height: 100%;  
 }
 
-
 .presentation
 {
     border: 5%;
     margin-bottom: 5%;
 }
 
-
-.footer h4, p
-{
-    color: grey;
-    height: 50px;
-}
-
-#foot
-{
-    width: 100%;
-}
 button:not(:disabled)
 {
     color: grey;
 }
+
 .alert
 {
     position: fixed;
@@ -95,10 +84,6 @@ input[type=submit]
     transition-delay: .1s;
 }
 
-.logobio
-{
-    margin-left: 10%;
-}
 
 
 

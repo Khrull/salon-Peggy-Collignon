@@ -27,26 +27,36 @@
                             <div class="navbar-nav">
                                 <?php if(isset($_SESSION['utilisateur']))
                                 { ?>
-                                <a class="nav-item nav-link" href="index.php?action=deconnexion">Se déconnecter</a></li>
-                                <a class="nav-item nav-link" href="index.php?action=rendezVous">Rendez-vous</a></li>
+                                <li><a class="nav-item nav-link" href="index.php?action=deconnexion">Se déconnecter</a></li>
+                                <li><a class="nav-item nav-link" href="index.php?action=rendezVous">Rendez-vous</a></li>
                                 <?php }
                                 else {?>
-                                <a class="nav-item nav-link" href="index.php?action=btnSeConnecter">Se connecter</a></li>
-                                <a class="nav-item nav-link" href="index.php?action=btnCreerCompte">Créer un compte</a></li>
-                                <a class="nav-item nav-link" href="index.php?action=rdvLog">Rendez-vous</a></li>
+                                <li><a class="nav-item nav-link" href="index.php?action=btnSeConnecter">Se connecter</a></li>
+                                <li><a class="nav-item nav-link" href="index.php?action=btnCreerCompte">Créer un compte</a></li>
+                                <li><a class="nav-item nav-link" href="index.php?action=rdvLog">Rendez-vous</a></li>
                                 <?php }?>
-                                <a class="nav-item nav-link" href="index.php?action=femme">La femme</a></li>
-                                <a class="nav-item nav-link" href="index.php?action=homme">L'homme</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">La Femme</a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="index.php?action=femme">Nos produits</a>
+                                        <a class="dropdown-item" href="index.php?action=tarifsFemme">Les tarifs</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">L'Homme</a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="index.php?action=homme">Nos produits</a>
+                                        <a class="dropdown-item" href="index.php?action=tarifsHomme">Les tarifs</a>
+                                </li>
                                 <?php if(isset($_SESSION['utilisateur']))
                                 {
                                     if($_SESSION['grpUtilisateur']==1)
                                         {?>
-                                            <a class="nav-item nav-link" href="index.php?action=ficheClient">Fichier client</a></li>
-                                            <a class="nav-item nav-link" href="index.php?action=agenda">Agenda</a></li>
+                                            <li><a class="nav-item nav-link" href="index.php?action=ficheClient">Fichier client</a></li>
+                                            <li><a class="nav-item nav-link" href="index.php?action=agenda">Agenda</a></li>
                                         <?php }
                                     elseif($_SESSION['grpUtilisateur']==2)
                                     {?>
-                                        <a class="nav-item nav-link" href="index.php?action=ficheClient">Fichier client</a></li>
+                                        <li><a class="nav-item nav-link" href="index.php?action=ficheClient">Fichier client</a></li>
                                     <?php }    
                                 }?>
                             </div>
@@ -66,7 +76,7 @@
                     <div class="col align-self-start">
                         <img src="public/images/la-biosthetique-logo.jpg" class="rounded" alt="la-biosthetique-logo">
                     </div>
-                    <div class="col align-self-center logobio">
+                    <div class="col align-self-center">
                         <?php
                         if(isset($_SESSION['utilisateur']))
                         {?>
@@ -74,7 +84,7 @@
                         <?php
                         }?>
                     </div>        
-                    <div class="col align-self-end" id="socialNetworks">
+                    <div class="col align-self-end">
                         <a href="https://www.facebook.com/pg/coiffeurpeggycollignon/posts/"><i class="fab fa-facebook-square fa-3x"></i></a>
                     </div>
                 </div>
