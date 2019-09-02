@@ -16,6 +16,11 @@
     margin-bottom: 5%;  
 }
 
+.col.align-self-center.reveal-1.reveal-visible.textproduitfemme
+{
+    margin-bottom: 5%;
+}
+
 .rdv
 {
     margin-bottom: 5%;
@@ -26,6 +31,16 @@
 {
     border: 5%;
     margin-bottom: 5%;
+}
+
+.beaute
+{
+    background-color: rgb(231, 230, 230);
+}
+
+.volume
+{
+    background-color: rgb(231, 230, 230);
 }
 
 button:not(:disabled)
@@ -79,9 +94,19 @@ input[type=submit]
     transition: 1s cubic-bezier(.5, 0, 0, 1);
 }
 
+.reveal-1
+{
+    transition-delay: .2s;
+}
+
 .reveal-2
 {
-    transition-delay: .1s;
+    transition-delay: .5s;
+}
+
+.reveal-3
+{
+    transition-delay: .8s;
 }
 
 
