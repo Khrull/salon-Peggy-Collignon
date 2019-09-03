@@ -8,6 +8,7 @@
         <title><?= $title ?></title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+        <link href="https://fonts.googleapis.com/css?family=Lusitana&display=swap" rel="stylesheet">
         <link href="public/css/style.css" rel="stylesheet" />
         <link rel="icon" href="public/images/logo.jpg" /> 
     </head>
@@ -86,8 +87,9 @@
                     </div>        
                     <div class="col align-self-end">
                         <a href="https://www.facebook.com/pg/coiffeurpeggycollignon/posts/"><i class="fab fa-facebook-square fa-3x"></i></a>
+                        <a href="https://www.instagram.com/collignonpeggy/?hl=fr"><i class="fab fa-instagram fa-3x"></i></a>
                     </div>
-                </div>
+                 </div>
             </div>
         </footer>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
