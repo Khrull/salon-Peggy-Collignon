@@ -1,6 +1,6 @@
 jQuery(function($){
 
-        var alert = $('#alert');
+        const alert = $('#alert');
         if(alert.length > 0){
             alert.hide().slideDown(500).delay(3000).slideUp();
              
@@ -27,3 +27,4 @@ const observer = new IntersectionObserver(handleIntersect, options)
 document.querySelectorAll('[class*="reveal-"]').forEach(function (r) {
     observer.observe(r)
 })
+
