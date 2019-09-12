@@ -68,8 +68,12 @@ try {
                 $agenda -> agenda();
                 break;
                 
-                case 'meContacter' : $contacter = new PageController();
+                case 'meContacter': $contacter = new PageController();
                 $contacter -> formContact();
+                break;
+
+                case 'mentionsLegales': $mentions = new Pagecontroller();
+                $mentions -> mentions();
                 break;
 
                 case 'envoyerMessage' : $envoyerMessage = new PageController();

@@ -49,10 +49,17 @@ class PageController
         $session = new AlertManager();
         require('view/backend/agenda.php');
     }
+
     function formContact()
     {
         $session = new AlertManager();
         require('view/frontend/formContactView.php');
+    }
+
+    function mentions()
+    {
+        $session = new AlertManager();
+        require('view/frontend/mentionsLegalesView.php');
     }
 
     function envoieMessage()

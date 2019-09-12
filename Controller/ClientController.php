@@ -9,7 +9,7 @@ use Model\ClientManager;
 class ClientController
 {
 
-
+    // affiche la liste de tous les clients
     function listAllClients()
     {
         $session = new AlertManager();
@@ -19,6 +19,7 @@ class ClientController
         require('view/backend/fichierClientView.php');
     }
 
+    //affiche le client choisi sur la page de modification
     function modificationClient()
     {
         if (isset($_GET['id']) > 0)
@@ -30,6 +31,7 @@ class ClientController
         require('view/backend/FicheClientView.php');
     }
 
+    //modifie les donnees du client dans la bdd
     function modifier()
     {
         if (isset($_GET['id']))
@@ -46,6 +48,7 @@ class ClientController
         header('location: index.php?action=ficheClient');
     }
 
+    //supprime un client de la bdd
     function suppression()
     {
         if (isset ($_GET['id']))

@@ -7,12 +7,14 @@ use Model\UserManager;
 
 class UserController
 {
+    //affiche le formulaire de connexion
     function formLogin()
     {
         $session = new AlertManager();
         require('view/frontend/connexionView.php');
     }
 
+    //affiche une alerte sur la page de connexion pour la prise de rdv
     function formLoginAlert()
     {
         $session = new AlertManager();
@@ -20,6 +22,7 @@ class UserController
         require('view/frontend/connexionView.php');
     }
 
+    //affiche le formulaire d'inscription
     function formInscription()
     {
         $session = new AlertManager();
@@ -27,17 +30,21 @@ class UserController
     }
 
 
+    //fonction de connexion
     function login()
     {
+        //les champs ne sont pas vides
         $session = new AlertManager();
         if (!empty($_POST['email']) && !empty($_POST['password'])) 
         {
+            //les champs moins les espaces sont compares a la bdd
             $email=trim($_POST['email']);
             $pass=trim($_POST['password']);
             $userManager = new UserManager();
             $user = $userManager->getUser($email);
 
         
+            //si l'utilisateur n'existe pas 
             if ($user===false)
             {
                 
@@ -45,6 +52,7 @@ class UserController
                 header('Location: index.php?action=btnSeConnecter');
                 
             }
+            //si le mot de passe correspond recuperation des donnees
             else
             {
                 if (password_verify($pass, $user['pass']))
@@ -58,6 +66,8 @@ class UserController
                     header('Location: index.php');
                     
                 }
+
+                //si le mot de passe ne correspond pas 
                 else
                 {
                     $session->setflash('identifiant ou mot de passe erroné.','danger');
@@ -66,6 +76,8 @@ class UserController
                 }
             }
         }
+
+        //si un ou les champs ne sont pas remplis
         elseif (empty($_POST['email']) || empty($_POST['password']))
         {
             $session->setflash('identifiant et/ou de passe manquants.','danger');
@@ -73,6 +85,7 @@ class UserController
         }    
     }
 
+    //fonction de deconnexion
     function logout()
     {
         session_unset ();
@@ -80,18 +93,23 @@ class UserController
         header('location: index.php?action=btnSeConnecter');
     }
 
+    //fonction d'ajout d'un nouvel utilisateur
     function addNewUser()
     {
+        //si tous les champs sont remplis
         $session = new AlertManager();
         if(isset($_POST["email"]) && isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["phone"]) && isset($_POST["adresse"]) && isset($_POST["birth"]) && isset($_POST["password"]) && isset($_POST["conf_password"]))
         {
-            if(filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL))
+            //si l'adresse mail est au bon format
+           if(filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL))
             {
+                //si l'adresse mail n'est pas deja utilisee
                 $email=trim($_POST['email']);
                 $userManager = new UserManager();
                 $user = $userManager->getUser($email);
                 if(trim($_POST["email"])!=$user['mail'])
                 {
+                    //si le mot de passe et sa confirmation correspondent
                     if($_POST["password"] == $_POST["conf_password"])
                     {
                         

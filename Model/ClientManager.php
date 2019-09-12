@@ -6,11 +6,11 @@ use Model\Manager;
 
 class ClientManager extends Manager
 {
-    //Renvoie tous les clients
+    //Renvoie tous les clients par ordre alphabetique
     public function getAllClients()
     {
         $db = $this->dbConnect();
-        $allClients = $db->query('SELECT id, mail, nom, prenom, phone,adresse, birth, SUBSTRING(fiche, 1, 15) AS preview FROM users WHERE id_groupe = 3 ORDER BY id');
+        $allClients = $db->query('SELECT id, mail, nom, prenom, phone,adresse, birth, SUBSTRING(fiche, 1, 15) AS preview FROM users WHERE id_groupe = 3 ORDER BY nom');
         $allClients->execute(array());
         $results = $allClients->fetchAll();
         return $results;

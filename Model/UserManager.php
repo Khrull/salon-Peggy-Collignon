@@ -6,6 +6,7 @@ use Model\Manager;
 
 class UserManager extends Manager
 {
+    //selectionne un utilisateur en fonction de son adresse mail dans la bdd
     public function getUser($email)
     {
         
@@ -17,6 +18,7 @@ class UserManager extends Manager
         return $result;
     }
 
+    // ajoute un nouvel utilisateur a la bdd
     public function newUser()
     {
         $hash = password_hash($_POST["password"], PASSWORD_DEFAULT);

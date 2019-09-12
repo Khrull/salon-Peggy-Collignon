@@ -74,26 +74,34 @@
         <footer class="footer">
             <div class="container-dark bg-dark">
                 <div class="row" id="foot">
-                    <div class="col align-self-start">
+                    <div class="col-xl-4 logobio">
                         <img src="public/images/la-biosthetique-logo.jpg" class="rounded" alt="la-biosthetique-logo">
                     </div>
-                    <div class="col align-self-center">
+                    <div class="col-xl-4">
+                        <div class="credits">
+                        <p>Réalisation: Frédéric Collignon</p>
+                        <p> © Peggy Collignon </p>
+                        </div>
+                        <a href="index.php?action=mentionsLegales" class="mentions"><button class="btn btn-default">Mentions Légales</button></a>
                         <?php
                         if(isset($_SESSION['utilisateur']))
                         {?>
-                            <a href="index.php?action=meContacter" class="text-uppercase"><button class="btn btn-default">Me contacter</button></a>
+                            <a href="index.php?action=meContacter" class="contact"><button class="btn btn-default">Me contacter</button></a>
                         <?php
                         }?>
                     </div>        
-                    <div class="col align-self-end">
+                    <div class="col-xl-4 logosociaux">
                         <a href="https://www.facebook.com/pg/coiffeurpeggycollignon/posts/"><i class="fab fa-facebook-square fa-3x"></i></a>
                         <a href="https://www.instagram.com/collignonpeggy/?hl=fr"><i class="fab fa-instagram fa-3x"></i></a>
                     </div>
                  </div>
             </div>
         </footer>
+        
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="public/js/inscription.js"></script>
         <script type="text/javascript" src="public/js/main.js"></script>
+        
     </body>
 </html>
