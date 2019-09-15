@@ -10,8 +10,7 @@ class ClientManager extends Manager
     public function getAllClients()
     {
         $db = $this->dbConnect();
-        $allClients = $db->query('SELECT id, mail, nom, prenom, phone,adresse, birth, SUBSTRING(fiche, 1, 15) AS preview FROM users WHERE id_groupe = 3 ORDER BY nom');
-        $allClients->execute(array());
+        $allClients = $db->query('SELECT id, mail, nom, prenom, phone FROM users WHERE id_groupe = 3 ORDER BY nom');
         $results = $allClients->fetchAll();
         return $results;
     }
