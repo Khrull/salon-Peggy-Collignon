@@ -11,7 +11,7 @@
 
                 <div>
                     <label for="fiche">Votre message</label><br />
-                    <textarea class="form-control" rows = "10" id="message" name="message" required></textarea>
+                    <textarea class="form-control" rows = "10" name="message" required></textarea>
                 </div>
                 <div>
                     <input type="submit" value="envoyer" class=" btn btn-primary" formaction="index.php?action=envoyerMessage"/>

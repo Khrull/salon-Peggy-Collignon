@@ -40,6 +40,10 @@ try {
                 $inscription -> addNewUser();
                 break;
 
+                case 'equipe': $femme = new PageController();
+                $femme -> pageEquipe();
+                break;
+
                 case 'femme': $femme = new PageController();
                 $femme -> pageFemme();
                 break;
@@ -60,7 +64,7 @@ try {
                 $rdv -> rendezVous();
                 break;
 
-                case 'ficheClient': $fiche = new ClientController();
+                case 'fichierClient': $fiche = new ClientController();
                 $fiche -> listAllClients();
                 break;
                 

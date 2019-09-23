@@ -45,7 +45,7 @@ class ClientController
         }
         $session = new AlertManager();
         $session->setflash('la fiche client a bien été modifié','success');
-        header('location: index.php?action=ficheClient');
+        header('location: index.php?action=fichierClient');
     }
 
     //supprime un client de la bdd
@@ -62,7 +62,7 @@ class ClientController
         }    
         $session = new AlertManager();
         $session->setflash('La fiche client a bien été supprimé','success');
-        header('Location: index.php?action=listAllPostsTemp');
+        header('Location: index.php?action=fichierClient');
     }
 
     

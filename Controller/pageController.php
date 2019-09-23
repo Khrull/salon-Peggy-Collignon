@@ -14,6 +14,12 @@ class PageController
         require('view/frontend/accueil.php');
     }
 
+    function pageEquipe()
+    {
+        $session = new AlertManager();
+        require('view/frontend/equipe.php');
+    }
+
     function pageFemme()
     {
         $session = new AlertManager();

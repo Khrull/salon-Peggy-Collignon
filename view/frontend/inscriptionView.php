@@ -21,7 +21,7 @@
 						<input type="text" placeholder="Prénom" id="prenom" name="prenom" class="form-control" onblur="verifPrenom(this)" required minlength="2"/>
 					</div>
 					<div class="shadow-lg form-group">
-						<input type="text" placeholder="Email" id="email" name="email" class="form-control email"  onblur="verifEmail(this)" required/>
+						<input type="email" placeholder="Email" id="email" name="email" class="form-control email"  onblur="verifEmail(this)" required/>
 					</div>
 					<div class="shadow-lg form-group">
 						<input type="text" placeholder="Téléphone" id="phone" name="phone" class="form-control" onblur="verifPhone(this)" required/>
