@@ -37,6 +37,20 @@
                     ?>
                 </tbody>
             </table>
+            <div class="pagination">
+                            <?php
+                for($i=1;$i<=$pagesTotales;$i++)
+                    {
+                        if($i==$pageCourante)
+                        {
+                            echo "<li class='page-item active' aria-current='page'><span class='page-link'>$i<span class='sr-only'>(current)</span></span></li>";
+                        }
+                        else
+                        {
+                            echo " <li class='page-item'><a class='page-link' <a href=\"index.php?action=fichierClient&page=$i\">$i</a> ";
+                        }
+                    }?>
+            </div>         
         </div>
     </div>    
     

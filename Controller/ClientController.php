@@ -14,7 +14,22 @@ class ClientController
     {
         $session = new AlertManager();
         $clientManager = new ClientManager();
-        $allClients = $clientManager->getAllClients();
+        $clientParPage = 5;
+        $nbClients = $clientManager->getNbClients();
+        $pagesTotales = ceil($nbClients/$clientParPage);
+        if(isset($_GET['page']) AND !empty($_GET['page']) AND $_GET['page'] > 0 AND $_GET['page'] <= $pagesTotales)
+        {
+            $_GET['page'] = intval($_GET['page']);
+            $pageCourante = $_GET['page'];
+        }
+        else
+        {
+            $pageCourante = 1;
+        }
+
+        $depart = ($pageCourante-1)*$clientParPage;
+        $allClients = $clientManager->getAllClients($depart, $clientParPage);
+      
 
         require('view/backend/fichierClientView.php');
     }

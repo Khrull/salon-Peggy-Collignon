@@ -6,13 +6,25 @@ use Model\Manager;
 
 class ClientManager extends Manager
 {
+
     //Renvoie tous les clients par ordre alphabetique
-    public function getAllClients()
+    public function getAllClients($depart, $clientParPage)
     {
         $db = $this->dbConnect();
-        $allClients = $db->query('SELECT id, mail, nom, prenom, phone FROM users WHERE id_groupe = 3 ORDER BY nom');
-        $results = $allClients->fetchAll();
-        return $results;
+        $allClients = $db->query('SELECT id, mail, nom, prenom, phone FROM users WHERE id_groupe = 3 ORDER BY nom LIMIT '.$depart.','.$clientParPage);
+        while($clients = $allClients->fetchAll())
+        {
+            return $clients;
+        }
+    }
+
+    //Renvoie le nombre de clients
+    public function getNbClients()
+    {
+        $db = $this->dbConnect();
+        $nbClientsreq = $db->query('SELECT id FROM users');
+        $nbClients = $nbClientsreq->rowCount();
+        return $nbClients;
     }
 
     //Renvoie le client selectionné
