@@ -65,7 +65,7 @@
                     <dt class="col-sm-3">Adresse :</dt>
                     <dd class="col-sm-9"> 26 Rue nationale, 57420 Verny</dd>
                     <dt class="col-sm-3">Téléphone :</dt>
-                    <dd class="col-sm-9">03 87 52 78 22</dd>
+                    <dd class="col-sm-9 font-weight-bold">03 87 52 78 22</dd>
                 </div>
                 <div class="col align-self-center reveal-2">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10469.057792507621!2d6.204083908984376!3d49.00555370848626!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeb45ff15523efd09!2sPeggy+Collignon+Coiffeur+Coloriste+Barbier!5e0!3m2!1sfr!2sfr!4v1561447902204!5m2!1sfr!2sfr" class="shadow-lg" width="260" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
