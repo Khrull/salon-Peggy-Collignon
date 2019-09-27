@@ -69,6 +69,7 @@
 
         <!-- SECTION PRINCIPALE -->
         <div class="bloc_page">
+            <?php $session->flash();?>                    
             <?= $content ?>
         </div>
             

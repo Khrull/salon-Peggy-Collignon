@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="row">
 
-            <?php $session->flash(); ?>
+            
             <div class="col-xl-12 logo">
                 <img src="public/images/logo_peggy_collignon.jpg" class="img-fluid" alt="Responsive image logo salon Peggy COLLIGNON">
             </div>

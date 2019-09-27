@@ -131,7 +131,7 @@ button:not(:disabled)
 .alert
 {
     position: fixed;
-    top:0; left:0; right:0;
+    top:60px; left:0; right:0;
     z-index: 1060;
     display: none;
 }
