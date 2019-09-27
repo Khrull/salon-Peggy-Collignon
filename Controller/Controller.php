@@ -1,8 +1,7 @@
 <?php
+namespace Controller;
 
-namespace Model;
-
-class MailManager
+class Controller
 {
     // envoie un mail
     public function mailMe()

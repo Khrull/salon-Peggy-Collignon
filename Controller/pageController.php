@@ -3,10 +3,10 @@ namespace Controller;
 
 // Chargement des classes
 use Model\AlertManager;
-use Model\MailManager;
 
 
-class PageController
+
+class PageController extends Controller
 {
     function accueil()
     {
@@ -73,8 +73,7 @@ class PageController
        
         if (isset($_POST['message']))
         {
-            $sendMessage = new MailManager();
-            $envoie = $sendMessage->mailMe();
+            $envoie = $this->mailMe();
         }
         $session = new AlertManager();
         $session->setflash('votre message a bien été envoyé','success');
