@@ -22,7 +22,7 @@ class ClientManager extends Manager
     public function getNbClients()
     {
         $db = $this->dbConnect();
-        $nbClientsreq = $db->query('SELECT id FROM users');
+        $nbClientsreq = $db->query('SELECT id FROM users WHERE id_groupe = 3');
         $nbClients = $nbClientsreq->rowCount();
         return $nbClients;
     }

@@ -5,7 +5,7 @@
 <?php ob_start(); ?>
 
 <div class="container">
-	
+<?php $session->flash();?>	
     	<h1 class="jumbotron">Connexion</h1>
 
 	

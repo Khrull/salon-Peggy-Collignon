@@ -7,7 +7,7 @@
     <div class="container">
 		<h2 class="entry-title">Mentions légales</h2>
 	</div>
-	<div class="et_pb_text_inner"><p>https://http://www.projet5oc-fredcol.ovh est édité par :</p>
+	<div class="et_pb_text_inner"><p>http://www.projet5oc-fredcol.ovh est édité par :</p>
 		<p><strong>Peggy COLLIGNON</strong><br />26 rue nationale<br />57420 Verny<br /><strong>Tél.</strong>: 03 87 52 78 22</p>
 		<p>Site réalisé par Frédéric COLLIGNON dans le cadre de la formation DWJ de Openclassrooms et hébergé par OVH</p>
 		<h2>Siège social :</h2>
