@@ -2,30 +2,27 @@
 namespace Controller;
 
 // Chargement des classes
-use Model\AlertManager;
 use Model\UserManager;
 
-class UserController
+class UserController extends Controller
 {
     //affiche le formulaire de connexion
     function formLogin()
     {
-        $session = new AlertManager();
         require('view/frontend/connexionView.php');
     }
 
     //affiche une alerte sur la page de connexion pour la prise de rdv
     function formLoginAlert()
     {
-        $session = new AlertManager();
-        $session->setflash('connectez-vous ou inscrivez-vous pour prendre rendez vous.','info');
+        
+        $session = $this->setflash('connectez-vous ou inscrivez-vous pour prendre rendez vous.','info');
         require('view/frontend/connexionView.php');
     }
 
     //affiche le formulaire d'inscription
     function formInscription()
     {
-        $session = new AlertManager();
         require('view/frontend/inscriptionView.php');
     }
 
@@ -34,7 +31,6 @@ class UserController
     function login()
     {
         //les champs ne sont pas vides
-        $session = new AlertManager();
         if (!empty($_POST['email']) && !empty($_POST['password'])) 
         {
             //les champs moins les espaces sont compares a la bdd
@@ -48,7 +44,7 @@ class UserController
             if ($user===false)
             {
                 
-                $session->setflash('identifiant ou mot de passe erroné.','danger');
+                $session= $this->setflash('identifiant ou mot de passe erroné.','danger');
                 header('Location: index.php?action=btnSeConnecter');
                 
             }
@@ -62,7 +58,7 @@ class UserController
                     $_SESSION['utilisateurMail'] = $user['mail'];
                     $_SESSION['idUtilisateur'] = $user['id'];
                     $_SESSION['grpUtilisateur'] = $user['id_groupe'];
-                    $session->setflash("Bonjour et bienvenue ".$user['prenom'], 'success');
+                    $session = $this->setflash("Bonjour et bienvenue ".$user['prenom'], 'success');
                     header('Location: index.php');
                     
                 }
@@ -70,7 +66,7 @@ class UserController
                 //si le mot de passe ne correspond pas 
                 else
                 {
-                    $session->setflash('identifiant ou mot de passe erroné.','danger');
+                    $session = $this->setflash('identifiant ou mot de passe erroné.','danger');
                     header('Location: index.php?action=btnSeConnecter');
                 
                 }
@@ -80,7 +76,7 @@ class UserController
         //si un ou les champs ne sont pas remplis
         elseif (empty($_POST['email']) || empty($_POST['password']))
         {
-            $session->setflash('identifiant et/ou de passe manquants.','danger');
+            $session= $this->setflash('identifiant et/ou de passe manquants.','danger');
             header('Location: index.php?action=btnSeConnecter');
         }    
     }
@@ -97,7 +93,6 @@ class UserController
     function addNewUser()
     {
         //si tous les champs sont remplis
-        $session = new AlertManager();
         if(isset($_POST["email"]) && isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["phone"]) && isset($_POST["adresse"]) && isset($_POST["birth"]) && isset($_POST["password"]) && isset($_POST["conf_password"]))
         {
             //si l'adresse mail est au bon format
@@ -116,30 +111,30 @@ class UserController
                         $userManager = new UserManager();
                         $newUser = $userManager->newUser();
                         header('Location: index.php?action=btnSeConnecter');
-                        $session->setflash('Inscription réussie, veuillez vous connecter.','success');
+                        $session = $this->setflash('Inscription réussie, veuillez vous connecter.','success');
                     }
                     else 
                     {
                         header('Location: index.php?action=btnSeConnecter');
-                        $session->setflash('Les 2 mots de passe sont différents!','danger');
+                        $session = $this->setflash('Les 2 mots de passe sont différents!','danger');
                     }
                 }
                 else
                 {
                     header('Location: index.php?action=btnSeConnecter');
-                    $session->setflash('cette adresse mail est déja utilisée!','danger');
+                    $session = $this->setflash('cette adresse mail est déja utilisée!','danger');
                 }    
             }
             else
             {
                 header('Location: index.php?action=btnSeConnecter');
-                $session->setflash('Le format de l\'adresse mail est incorrect !','danger');
+                $session = $this->setflash('Le format de l\'adresse mail est incorrect !','danger');
             }
         }
         else
         {
             header('Location: index.php?action=btnSeConnecter');
-            $session->setflash('Tous les champs doivent être remplis','danger');
+            $session = $this->setflash('Tous les champs doivent être remplis','danger');
         }       
     }
 }    

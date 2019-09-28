@@ -6,13 +6,12 @@ use Model\AlertManager;
 use Model\ClientManager;
 
 
-class ClientController
+class ClientController extends Controller
 {
 
     // affiche la liste de tous les clients
     function listAllClients()
     {
-        $session = new AlertManager();
         $clientManager = new ClientManager();
         $clientParPage = 5;
         $nbClients = $clientManager->getNbClients();
@@ -58,8 +57,7 @@ class ClientController
         {
             throw new Exception('Aucun identifiant de client envoyé');    
         }
-        $session = new AlertManager();
-        $session->setflash('la fiche client a bien été modifié','success');
+        $session = $this->setflash('la fiche client a bien été modifié','success');
         header('location: index.php?action=fichierClient');
     }
 
@@ -75,8 +73,7 @@ class ClientController
         {
             throw new Exception('Aucun identifiant de client envoyé');
         }    
-        $session = new AlertManager();
-        $session->setflash('La fiche client a bien été supprimé','success');
+        $session = $this->setflash('La fiche client a bien été supprimé','success');
         header('Location: index.php?action=fichierClient');
     }
 
