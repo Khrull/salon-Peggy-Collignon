@@ -40,6 +40,10 @@ try {
                 $inscription -> addNewUser();
                 break;
 
+                case 'ajouterCollab': $ajouterCollab = new UserController();
+                $ajouterCollab -> addNewCollab();
+                break;
+
                 case 'equipe': $femme = new PageController();
                 $femme -> pageEquipe();
                 break;
@@ -88,12 +92,28 @@ try {
                 $client -> modificationclient();
                 break;
 
+                case 'collaborateur': $collaborateur = new UserController();
+                $collaborateur -> modificationCollaborateur();
+                break;
+
+                case 'pageCollab': $pageCollab = new UserController();
+                $pageCollab -> pageCollaborateur();
+                break;
+
                 case 'modifier': $modifier = new ClientController();
                 $modifier -> modifier();
                 break;
 
+                case 'modifierCollab': $modifier = new UserController();
+                $modifier -> modifierCollab();
+                break;
+
                 case 'supprimer': $supprimer = new ClientController();
                 $supprimer -> suppression();
+                break;
+
+                case 'supprimerCollab': $supprimerCollab = new UserController();
+                $supprimerCollab -> suppressionCollab();
                 break;
 
                 default: $accueil = new PageController();

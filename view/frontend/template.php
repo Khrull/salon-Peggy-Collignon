@@ -58,7 +58,16 @@
                                         <div class="btn-group" role="group" aria-label="Basic example">
                                             <li><a type="button" class="btn btn-secondary" id="btn-fichier" href="index.php?action=fichierClient">Fichier client</a></li>
                                             <li><a type="button" class="btn btn-secondary" id="btn-agenda" href="index.php?action=agenda">Agenda</a></li>
+                                            <li><a type="button" class="btn btn-secondary" id="btn-collaborateurs" href="index.php?action=pageCollab">Collaborateurs</a></li>
+                                            <li><a type="button" class="btn btn-secondary" id="btn-adminProd" href="index.php?action=ajoutProd">Administration Produits</a></li>
                                         </div>   
+                                        <?php }
+                                    elseif($_SESSION['grpUtilisateur']==2) 
+                                        {?>
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <li><a type="button" class="btn btn-secondary" id="btn-fichier" href="index.php?action=fichierClient">Fichier client</a></li>
+                                            <li><a type="button" class="btn btn-secondary" id="btn-agenda" href="index.php?action=agenda">Agenda</a></li>
+                                        </div>      
                                         <?php }
                                 }?>
                         </div>

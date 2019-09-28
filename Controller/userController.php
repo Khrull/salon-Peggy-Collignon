@@ -3,6 +3,7 @@ namespace Controller;
 
 // Chargement des classes
 use Model\UserManager;
+use Model\ClientManager;
 
 class UserController extends Controller
 {
@@ -137,4 +138,108 @@ class UserController extends Controller
             $session = $this->setflash('Tous les champs doivent être remplis','danger');
         }       
     }
+
+        //fonction d'ajout d'un nouvel utilisateur
+        function addNewCollab()
+        {
+            //si tous les champs sont remplis
+            if(isset($_POST["email"]) && isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["phone"]) && isset($_POST["adresse"]) && isset($_POST["birth"]) && isset($_POST["password"]) && isset($_POST["conf_password"]))
+            {
+                //si l'adresse mail est au bon format
+               if(filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL))
+                {
+                    //si l'adresse mail n'est pas deja utilisee
+                    $email=trim($_POST['email']);
+                    $userManager = new UserManager();
+                    $user = $userManager->getUser($email);
+                    if(trim($_POST["email"])!=$user['mail'])
+                    {
+                        //si le mot de passe et sa confirmation correspondent
+                        if($_POST["password"] == $_POST["conf_password"])
+                        {
+                            
+                            $userManager = new UserManager();
+                            $newUser = $userManager->newCollab();
+                            header('Location: index.php?action=pageCollab');
+                            $session = $this->setflash('Nouveau collaborateur ajouté.','success');
+                        }
+                        else 
+                        {
+                            header('Location: index.php?action=pageCollab');
+                            $session = $this->setflash('Les 2 mots de passe sont différents!','danger');
+                        }
+                    }
+                    else
+                    {
+                        header('Location: index.php?action=pageCollab');
+                        $session = $this->setflash('cette adresse mail est déja utilisée!','danger');
+                    }    
+                }
+                else
+                {
+                    header('Location: index.php?action=pageCollab');
+                    $session = $this->setflash('Le format de l\'adresse mail est incorrect !','danger');
+                }
+            }
+            else
+            {
+                header('Location: index.php?action=pageCollab');
+                $session = $this->setflash('Tous les champs doivent être remplis','danger');
+            }       
+        }
+
+    // affiche la liste de tous les collaborateurs
+    function pageCollaborateur()
+    {
+            
+        $userManager = new UserManager();
+        $allCollab = $userManager->getAllCollab();
+    
+        require('view/backend/collaborateursView.php');
+    }
+
+    //affiche le collaborateur choisi sur la page de modification
+    function modificationCollaborateur()
+    {
+        if (isset($_GET['id']) > 0)
+        {
+            $collabManager = new ClientManager();
+            $client = $collabManager->getClient($_GET['id']);
+        }
+               
+        require('view/backend/FicheCollabView.php');
+    }
+
+        //modifie les donnees du collaborateur dans la bdd
+        function modifierCollab()
+        {
+            if (isset($_GET['id']))
+            {
+                $modFiche = new ClientManager();
+                $modifFiche = $modFiche->modifierFiche($_GET['id'], $_POST['phone'], $_POST['adresse'], $_POST['fiche']);
+            }
+            else
+            {
+                throw new Exception('Aucun identifiant de client envoyé');    
+            }
+            $session = $this->setflash('la fiche collaborateur a bien été modifié','success');
+            header('location: index.php?action=pageCollab');
+        }
+
+            //supprime un client de la bdd
+        function suppressionCollab()
+        {
+            if (isset ($_GET['id']))
+            {
+                $clientManager = new ClientManager();
+                $deletePost = $clientManager->deleteClient($_GET['id']);
+            }
+            else 
+            {
+                throw new Exception('Aucun identifiant de client envoyé');
+            }    
+            $session = $this->setflash('La fiche collaborateur a bien été supprimé','success');
+            header('Location: index.php?action=pageCollab');
+        }
+
 }    
