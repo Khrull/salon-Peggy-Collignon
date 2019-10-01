@@ -103,5 +103,21 @@ class Controller
         require('view/frontend/lafemmeView.php');
     }
 
+        //supprime un produit de la bdd
+        function supprimerProd()
+        {
+            if (isset ($_GET['id']))
+            {
+                $prodManager = new ProdManager();
+                $deleteProd = $prodManager->deleteProd($_GET['id']);
+            }
+            else 
+            {
+                throw new Exception('Aucun identifiant de produit envoyé');
+            }    
+            $session = $this->setflash('Le produit a bien été supprimé de la liste','success');
+            header('Location: index.php?action=accil');
+        }
+
     
 }

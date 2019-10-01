@@ -27,7 +27,17 @@
                         <img src="<?php echo htmlspecialchars($data['img_produit']) ?>" class="img-fluid imgprod" alt="<?= htmlspecialchars($data['nom_produit']) ?>">
                     </div>
                     </div> 
-   
+                    
+                    <?php if(isset($_SESSION['utilisateur']))
+                    {
+                        if($_SESSION['grpUtilisateur']==1)
+                        {?>
+                            <div class="container edition">
+                                <a onClick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit de la liste ?')" href="index.php?action=suppProd&id=<?php echo $data['id']; ?>"><i class="fas fa-trash-alt"></i> Supprimer le produit</a>
+                            </div>
+                        <?php }
+                    }?>
+
                 </div>
         <?php
         }

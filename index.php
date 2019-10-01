@@ -121,6 +121,10 @@ try {
                 $supprimer -> suppression();
                 break;
 
+                case 'suppProd': $suppProd = new Controller();
+                $suppProd -> supprimerProd();
+                break;
+
                 case 'supprimerCollab': $supprimerCollab = new UserController();
                 $supprimerCollab -> suppressionCollab();
                 break;
