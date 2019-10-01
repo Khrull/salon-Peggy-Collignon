@@ -2,7 +2,7 @@
 namespace Controller;
 
 // Chargement des classes
-use Model\AlertManager;
+
 
 
 
@@ -56,6 +56,11 @@ class PageController extends Controller
     function mentions()
     {
         require('view/frontend/mentionsLegalesView.php');
+    }
+
+    function pageAjoutProd()
+    {
+        require('view/backend/ajoutProdView.php');
     }
 
     function envoieMessage()

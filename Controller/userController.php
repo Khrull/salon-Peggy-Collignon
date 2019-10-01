@@ -92,6 +92,7 @@ class UserController extends Controller
 
     //fonction d'ajout d'un nouvel utilisateur
     function addNewUser()
+    
     {
         //si tous les champs sont remplis
         if(isset($_POST["email"]) && isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["phone"]) && isset($_POST["adresse"]) && isset($_POST["birth"]) && isset($_POST["password"]) && isset($_POST["conf_password"]))
@@ -108,9 +109,17 @@ class UserController extends Controller
                     //si le mot de passe et sa confirmation correspondent
                     if($_POST["password"] == $_POST["conf_password"])
                     {
+                        $nom = $_POST['nom'];
+                        $prenom = $_POST['prenom'];
+                        $phone = $_POST['phone'];
+                        $adresse = $_POST['adresse'];
+                        $birth = $_POST['birth'];
+                        $fiche = 'Nouveau client';
+                        $groupe = '3';
+                        $hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
                         
                         $userManager = new UserManager();
-                        $newUser = $userManager->newUser();
+                        $newUser = $userManager->newUser($email, $nom, $prenom, $phone, $adresse, $birth, $hash, $fiche, $groupe);
                         header('Location: index.php?action=btnSeConnecter');
                         $session = $this->setflash('Inscription réussie, veuillez vous connecter.','success');
                     }
@@ -157,9 +166,16 @@ class UserController extends Controller
                         //si le mot de passe et sa confirmation correspondent
                         if($_POST["password"] == $_POST["conf_password"])
                         {
-                            
+                            $nom = $_POST['nom'];
+                            $prenom = $_POST['prenom'];
+                            $phone = $_POST['phone'];
+                            $adresse = $_POST['adresse'];
+                            $birth = $_POST['birth'];
+                            $fiche = 'Nouveau collaborateur';
+                            $groupe = '2';
+                            $hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
                             $userManager = new UserManager();
-                            $newUser = $userManager->newCollab();
+                            $newUser = $userManager->newUser($email, $nom, $prenom, $phone, $adresse, $birth, $hash, $fiche, $groupe);
                             header('Location: index.php?action=pageCollab');
                             $session = $this->setflash('Nouveau collaborateur ajouté.','success');
                         }

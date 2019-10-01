@@ -19,12 +19,12 @@ class UserManager extends Manager
     }
 
     // ajoute un nouvel utilisateur a la bdd
-    public function newUser()
+    public function newUser($email, $nom, $prenom, $phone, $adresse, $birth, $hash, $fiche, $groupe)
     {
-        $hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
+        
         $db = $this->dbConnect();
-        $newUser = $db->prepare('INSERT INTO users (mail, nom, prenom, phone, adresse, birth, pass, fiche, id_groupe) VALUES(?,?,?,?,?,?,?, "nouveau client", 3)');
-        $user = $newUser->execute(array($_POST['email'], $_POST['nom'], $_POST['prenom'], $_POST['phone'], $_POST['adresse'], $_POST['birth'], $hash));
+        $newUser = $db->prepare('INSERT INTO users SET mail = ?, nom = ?, prenom = ?, phone = ?, adresse = ?, birth = ?, pass = ?, fiche = ?, id_groupe = ?');
+        $user = $newUser->execute(array($email, $nom, $prenom, $phone, $adresse, $birth, $hash, $fiche, $groupe));
         return $user;
         	
     }
@@ -39,16 +39,5 @@ class UserManager extends Manager
             return $clients;
         }
     }
-
-        // ajoute un nouvel utilisateur a la bdd
-        public function newCollab()
-        {
-            $hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
-            $db = $this->dbConnect();
-            $newUser = $db->prepare('INSERT INTO users (mail, nom, prenom, phone, adresse, birth, pass, fiche, id_groupe) VALUES(?,?,?,?,?,?,?, "nouveau collaborateur", 2)');
-            $user = $newUser->execute(array($_POST['email'], $_POST['nom'], $_POST['prenom'], $_POST['phone'], $_POST['adresse'], $_POST['birth'], $hash));
-            return $user;
-                
-        }
 
 }

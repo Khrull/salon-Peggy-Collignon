@@ -7,6 +7,7 @@ require('vendor/autoload.php');
 use Controller\PageController;
 use Controller\ClientController;
 use Controller\UserController;
+use Controller\Controller;
 
 $action ="";
 if (isset($_GET['action'])) {
@@ -49,11 +50,11 @@ try {
                 break;
 
                 case 'femme': $femme = new PageController();
-                $femme -> pageFemme();
+                $femme -> listAllProdFemme();
                 break;
 
                 case 'homme': $homme = new PageController();
-                $homme -> pageHomme();
+                $homme -> listAllProdHomme();
                 break;
 
                 case 'tarifsFemme': $tariffemme = new PageController();
@@ -98,6 +99,14 @@ try {
 
                 case 'pageCollab': $pageCollab = new UserController();
                 $pageCollab -> pageCollaborateur();
+                break;
+
+                case 'ajoutProd': $ajoutProd = new PageController();
+                $ajoutProd -> pageAjoutProd();
+                break;
+
+                case 'ajouterProd': $ajouterProd = new Controller();
+                $ajouterProd -> ajouterProd();
                 break;
 
                 case 'modifier': $modifier = new ClientController();
