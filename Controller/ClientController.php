@@ -2,7 +2,6 @@
 namespace Controller;
 
 // Chargement des classes
-use Model\AlertManager;
 use Model\ClientManager;
 
 

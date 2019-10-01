@@ -86,6 +86,7 @@ class Controller
         }
     }
     
+    //affiche tous les produits de la gamme homme present dans la bdd
     function listAllProdHomme()
     {
         $prodManager = new ProdManager();
@@ -93,6 +94,8 @@ class Controller
         require('view/frontend/lhommeView.php');
     }
 
+
+    //affiche tous les produits de la gamme femme present dans la bdd
     function listAllProdFemme()
     {
         $prodManager = new ProdManager();

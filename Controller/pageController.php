@@ -18,16 +18,6 @@ class PageController extends Controller
         require('view/frontend/equipe.php');
     }
 
-    function pageFemme()
-    {
-        require('view/frontend/lafemmeView.php');
-    }
-
-    function pageHomme()
-    {
-        require('view/frontend/lhommeView.php');
-    }
-
     function tarifsFemme()
     {
         require('view/frontend/tarifFemmeView.php');
