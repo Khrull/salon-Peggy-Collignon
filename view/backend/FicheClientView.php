@@ -38,7 +38,10 @@
                 </div>
                 <div>
                     <input type="submit" value="Modifier" class=" btn btn-primary" formaction="index.php?action=modifier&id=<?php echo $client['id']; ?>" />
-                    <input type="submit" value="Supprimer" class=" btn btn-danger" onClick="return confirm('Êtes-vous sûr de vouloir supprimer cette fiche ?')" formaction="index.php?action=supprimer&id=<?php echo $client['id']; ?>" />
+                    <?php if($_SESSION['grpUtilisateur']==1)
+                                        {?>
+                                            <input type="submit" value="Supprimer" class=" btn btn-danger" onClick="return confirm('Êtes-vous sûr de vouloir supprimer cette fiche ?')" formaction="index.php?action=supprimer&id=<?php echo $client['id']; ?>" />
+                                        <?php } ?>    
                 </div>
             </form>
         </div>
