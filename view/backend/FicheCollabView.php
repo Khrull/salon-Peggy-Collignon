@@ -33,7 +33,7 @@
                 </div>
 
                 <div>
-                    <label for="fiche">Fiche Client</label><br />
+                    <label for="fiche">Informations</label><br />
                     <textarea class="form-control" rows = "40" id="fiche" name="fiche"><?= nl2br($client['fiche']) ?></textarea>
                 </div>
                 <div>
