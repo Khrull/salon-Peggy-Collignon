@@ -80,7 +80,7 @@ class Controller
             }
             else
             {
-                $session = $this->setflash('Seul les extensions JPG, JPEG et PNG sont acceptées ','danger');
+                $session = $this->setflash('Seules les extensions JPG, JPEG et PNG sont acceptées ','danger');
                 header('location: index.php?action=ajoutProd');
             }
         }
