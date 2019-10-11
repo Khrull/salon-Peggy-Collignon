@@ -74,6 +74,12 @@
     margin-top: 10%;
 }
 
+.pagination
+{
+    margin-bottom: 10%;
+}
+
+
 .wrapper
 {
 	padding-bottom: 90px;
@@ -350,9 +356,16 @@ input[type=submit]
     }
 
     .fichierClient
-        {
-            font-size: 1.2em;
-        }
+    {
+        font-size: 1.2em;
+    }
+
+    .nomPrenom
+    {
+        margin-top: 5%;
+        font-size: 2em;
+        margin-bottom: 5%;
+    }
 
 
 }

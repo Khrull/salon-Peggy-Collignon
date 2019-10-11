@@ -5,7 +5,7 @@
 
     <div class="row">
         <div class="col-xl-12">
-            <h1 class="display-3 leschapitres">Fichier Client:</h1>
+        <h1 class="jumbotron">Fichier Client:</h1>
         </div>    
    
         <div class="table-responsive">

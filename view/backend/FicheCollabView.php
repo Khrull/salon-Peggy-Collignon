@@ -10,9 +10,9 @@
 <div class="container">
     <div class="row">
         <div class="col-xl-12">
-            <h1 class="display-3"><?= htmlspecialchars($client['nom'])?>  <?= htmlspecialchars($client['prenom']) ?></h1>
-            <p class="h4">né(e) le : <?= htmlspecialchars($client['birth'])?></p>
-            <p class="h4">Adresse mail : <?= htmlspecialchars($client['mail'])?></p>
+            <h1 class="display-3 nomPrenom"><?= htmlspecialchars($client['nom'])?>  <?= htmlspecialchars($client['prenom']) ?></h1>
+            <p class="h4"><strong>né(e) le :</strong> <?= htmlspecialchars($client['birth'])?></p>
+            <p class="h4"><strong>Adresse mail :</strong> <?= htmlspecialchars($client['mail'])?></p>
         </div>    
     </div>
 </div> 
