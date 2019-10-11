@@ -10,14 +10,12 @@
 </div>
 <!-- Formulaire d'inscription-->
 <div class="container">
-	<div class="table-responsive">
+	<div class="table-responsive fichierClient">
             <table class="table table-striped table-dark">
                 <thead>
                     <tr>
                         <th scope="col">Nom</th>                
                         <th scope="col">Prenom</th>
-                        <th scope="col">Mail</th>
-                        <th scope="col">Telephone</th>
                     </tr>
                 </thead>
     
@@ -30,8 +28,6 @@
                     <tr>
                         <th scope="row"><?= htmlspecialchars($data['nom']) ?></th>
                         <td scope="row"><?= htmlspecialchars($data['prenom']) ?></td>
-                        <td scope="row"><?= htmlspecialchars($data['mail']) ?></td>
-                        <td scope="row"><?= htmlspecialchars($data['phone']) ?></td>
                         <td scope="row"><a href="index.php?action=collaborateur&amp;id=<?= $data['id'] ?>">Consulter</a></td>
                     </tr>
                     <?php
