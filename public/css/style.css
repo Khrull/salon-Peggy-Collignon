@@ -47,6 +47,33 @@
     margin-bottom: 5%;
 }
 
+.champEmail
+{
+    margin-top: 15%;
+}
+
+.champMdp
+{
+    margin-top: 5%;
+    margin-bottom: 15%;
+}
+
+.btnConnexion
+{
+    margin-bottom: 90%;
+}
+
+.btnInscription
+{
+    margin-top: 10%;
+    margin-bottom: 45%;
+}
+
+.formInscription
+{
+    margin-top: 10%;
+}
+
 .wrapper
 {
 	padding-bottom: 90px;
