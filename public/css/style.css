@@ -37,6 +37,10 @@
 {
     margin-bottom: 5%;  
 }
+.titrePresta
+{
+    background-color:  grey;
+}
 
 .card-deck
 {
@@ -201,6 +205,43 @@ input[type=submit]
         margin-right: 0%;
     }
 
+    .champEmail
+    {
+        margin-top: 25%;
+    }
+
+    .champMdp
+    {
+        margin-top: 25%;
+        margin-bottom: 25%;
+    }
+
+    .btnConnexion
+    {
+        margin-bottom: 85%;
+    }
+
+    .btnInscription
+    {
+        margin-top: 10%;
+        margin-bottom: 45%;
+    }
+
+    .formInscription
+    {
+        margin-top: 15%;
+    }
+
+    .ficheProduit
+    {
+        margin-top: 5%;
+    }
+
+    .descProd
+    {
+        margin-top: 10%;
+    }
+
 }
 
 @media (max-width: 768px)
@@ -209,6 +250,33 @@ input[type=submit]
     {
         margin-block-start: 6%;
         margin-right: 0%;
+    }
+
+    
+    .champEmail
+    {
+        margin-top: 25%;
+    }
+
+    .champMdp
+    {
+        margin-top: 25%;
+        margin-bottom: 25%;
+    }
+
+    .btnConnexion
+    {
+        margin-bottom: 40%;
+    }
+
+    .ficheProduit
+    {
+        margin-top: 5%;
+    }
+
+    .descProd
+    {
+        margin-top: 10%;
     }
     
 
@@ -220,6 +288,38 @@ input[type=submit]
     {
         margin-block-start: 15%;
         margin-right: 0%;
+    }
+
+    .champEmail
+    {
+        margin-top: 20%;
+    }
+
+    .champMdp
+    {
+        margin-top: 20%;
+        margin-bottom: 20%;
+    }
+
+    .btnConnexion
+    {
+        margin-bottom: 20%;
+    }
+
+    .ficheProduit
+    {
+        margin-top: 20%;
+    }
+
+    .descProd
+    {
+        margin-top: 10%;
+    }
+
+    .btnFicheClient
+    {
+        margin-top: 10%;
+        margin-bottom: 10%;
     }
 
     .table

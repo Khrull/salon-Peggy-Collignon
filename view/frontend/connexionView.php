@@ -14,12 +14,12 @@
 		<form action="index.php?action=connexion&amp;identification=connexionpost" method="post" class="col-md-6" id="connexion">
 			
 			<div class="shadow-lg form-group">
-				<input type="text" placeholder="Adresse Email" id="email" name="email" class="form-control email" />
+				<input type="text" placeholder="Adresse Email" id="email" name="email" class="form-control email  champEmail" />
 			</div>
 			<div class="shadow-lg form-group">
-				<input type="password" placeholder="Mot de passe" id="password" name="password" class="form-control" />
+				<input type="password" placeholder="Mot de passe" id="password" name="password" class="form-control champMdp" />
 			</div>
-			<div class="form-group right">
+			<div class="form-group btnConnexion">
 				<input type="submit" value="Connexion" class="btn btn-default"/>
 				<input type="submit" value="Créer un compte" formaction="index.php?action=btnCreerCompte" class="btn btn-default"/>
 				

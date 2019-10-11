@@ -10,7 +10,7 @@
 		<span class="h5" id="message"></span>
 </div>
 <!-- Formulaire d'inscription-->
-<div class="container">
+<div class="container formInscription">
 	<div class="d-flex justify-content-center">
 			
 				<form action="index.php?action=inscription&amp;identification=inscription" method="post" class="col-md-6" id="inscription" onsubmit="return verifForm(this)">
@@ -38,7 +38,7 @@
 					<div class="shadow-lg form-group">
 						<input type="password" placeholder="Confirmez votre mot de passe" id="conf_password" name="conf_password" class="form-control" onblur="verifPassConf(this)" required/>
 					</div>
-					<div class="form-group right">
+					<div class="form-group btnInscription">
 						<input type="submit" value="Inscription" class="btn btn-default" id="bouton_envoi"/>
 					</div>
 				</form>

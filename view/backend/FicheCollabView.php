@@ -36,7 +36,7 @@
                     <label for="fiche">Informations</label><br />
                     <textarea class="form-control" rows = "40" id="fiche" name="fiche"><?= nl2br($client['fiche']) ?></textarea>
                 </div>
-                <div>
+                <div class="btnFicheClient">
                     <input type="submit" value="Modifier" class=" btn btn-primary" formaction="index.php?action=modifierCollab&id=<?php echo $client['id']; ?>" />
                     <input type="submit" value="Supprimer" class=" btn btn-danger" onClick="return confirm('Êtes-vous sûr de vouloir supprimer cette fiche ?')" formaction="index.php?action=supprimerCollab&id=<?php echo $client['id']; ?>" />
                 </div>

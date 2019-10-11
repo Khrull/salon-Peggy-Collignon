@@ -36,7 +36,7 @@
                     <label for="fiche">Fiche Client</label><br />
                     <textarea class="form-control" rows = "40" id="fiche" name="fiche"><?= nl2br($client['fiche']) ?></textarea>
                 </div>
-                <div>
+                <div class="btnFicheClient">
                     <input type="submit" value="Modifier" class=" btn btn-primary" formaction="index.php?action=modifier&id=<?php echo $client['id']; ?>" />
                     <?php if($_SESSION['grpUtilisateur']==1)
                                         {?>

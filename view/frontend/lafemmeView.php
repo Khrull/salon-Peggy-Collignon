@@ -13,9 +13,9 @@
     foreach ($allProdFemme as $data)
         {
         ?>  
-                <div class="row align-items-center shadow">
+                <div class="row align-items-center shadow p-3 mb-5 bg-white rounded ficheProduit">
                     <div class="col-xl-8">    
-                    <div class="col align-self-center reveal-1">
+                    <div class="col align-self-center reveal-1 descProd">
                         <h3><?= htmlspecialchars($data['nom_produit']) ?></h3>
                         <p><?= nl2br($data['paragraphe']) ?></p>
                     </div>
